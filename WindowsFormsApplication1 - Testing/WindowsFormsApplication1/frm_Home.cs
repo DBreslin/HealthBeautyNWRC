@@ -23,6 +23,7 @@ namespace HairBeautyNWRC
         uc_Schedule schInstance = new uc_Schedule();
         uc_Clients clientInstance = new uc_Clients();
         uc_Users userInstance = new uc_Users();
+        uc_Cust_Btn userButton= new uc_Cust_Btn();
 
         public frm_Home()
         {
@@ -74,6 +75,7 @@ namespace HairBeautyNWRC
             btn_Stock.Size = new Size(button_Wth, button_Hgt);
             btn_Sales.Size = new Size(button_Wth, button_Hgt);
             btn_Reports.Size = new Size(button_Wth, button_Hgt);
+            btn_Test.Size = new Size(button_Wth, button_Hgt);
 
             /// <summary>
             /// This is the location of the buttons based on panel size and button size ------------ this is an example of method notation.
@@ -85,6 +87,7 @@ namespace HairBeautyNWRC
             btn_LoadClient.Location = new Point(pnl_Side.Width / 2 - btn_LoadClient.Width / 2 - pnl_SideSeperation.Width, (Cal_Month.Height + pnl_TopSeperation.Height + (button_Hgt * 5)));
             btn_Users.Location = new Point(pnl_Side.Width / 2 - btn_LoadClient.Width / 2 - pnl_SideSeperation.Width, (Cal_Month.Height + pnl_TopSeperation.Height + (button_Hgt * 6)));
             btn_Reports.Location = new Point(pnl_Side.Width / 2 - btn_LoadClient.Width / 2 - pnl_SideSeperation.Width, (Cal_Month.Height + pnl_TopSeperation.Height + (button_Hgt * 7)));
+            btn_Test.Location = new Point(pnl_Side.Width / 2 - btn_LoadClient.Width / 2 - pnl_SideSeperation.Width, (Cal_Month.Height + pnl_TopSeperation.Height + (button_Hgt * 8)));
 
             lbl_DayDate.Location = new Point(pnl_top.Width / 2 - lbl_DayDate.Width / 2, pnl_top.Height / 2 - lbl_DayDate.Height / 2);
             lbl_DayDate.Text = Cal_Month.SelectionRange.Start.DayOfWeek + " "
@@ -178,6 +181,16 @@ namespace HairBeautyNWRC
             Cal_Month.Enabled = false;
             lbl_DayDate.Text = DateTime.Now.DayOfWeek + " " + DateTime.Now.ToLongDateString();
             Cal_Month.SetDate(DateTime.Now);
+        }
+
+        private void btn_Test_Click(object sender, EventArgs e)
+        {
+            userButton = new uc_Cust_Btn();
+
+            pnl_Home.Controls.Add(userButton);
+            userButton.Dock = DockStyle.Fill;
+            userButton.BringToFront();
+            userButton.Show();
         }
     }   
 }

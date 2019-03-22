@@ -39,8 +39,8 @@ namespace HairBeautyNWRC
         {
             errP = new ErrorProvider();
 
-            //connStr = @"Data Source = .\SQLEXPRESS; Initial Catalog = NWRC_HairBeauty; Integrated Security = true";
-            connStr = @"Data Source = .; Initial Catalog = NWRC_HairBeauty; Integrated Security = true";
+            connStr = @"Data Source = .\SQLEXPRESS; Initial Catalog = NWRC_HairBeauty; Integrated Security = true";
+            //connStr = @"Data Source = .; Initial Catalog = NWRC_HairBeauty; Integrated Security = true";
 
             sqlBook = @"SELECT * from Booking";
             daBook = new SqlDataAdapter(sqlBook, connStr);
@@ -146,9 +146,11 @@ namespace HairBeautyNWRC
                         int current = row.Index;
                         int previous = row.Index - 1;
 
-
-                        dg_Schedule.Rows[previous].DefaultCellStyle.BackColor = Color.White;
-                        dg_Schedule.Rows[previous].Cells[0].Style.BackColor = Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+                        if ((curMin >= 15 && curHr != 9))
+                        {
+                            dg_Schedule.Rows[previous].DefaultCellStyle.BackColor = Color.White;
+                            dg_Schedule.Rows[previous].Cells[0].Style.BackColor = Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+                        }
 
                         if (current - (rowCount / 2) <= 0)
                         {

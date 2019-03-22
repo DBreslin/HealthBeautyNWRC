@@ -81,6 +81,12 @@
     <Compile Include="uc_Clients.Designer.cs">
       <DependentUpon>uc_Clients.cs</DependentUpon>
     </Compile>
+    <Compile Include="uc_Cust_Btn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Cust_Btn.Designer.cs">
+      <DependentUpon>uc_Cust_Btn.cs</DependentUpon>
+    </Compile>
     <Compile Include="uc_Schedule.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     <EmbeddedResource Include="uc_Clients.resx">
       <DependentUpon>uc_Clients.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="uc_Cust_Btn.resx">
+      <DependentUpon>uc_Cust_Btn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uc_Schedule.resx">
       <DependentUpon>uc_Schedule.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +155,75 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-sch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-sch2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonMask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonMouseOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-calmask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-calmouseover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-calup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-caldown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-HomeDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-HomeUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-clientsdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-clientsup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-salesup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-salesdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-stockdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-stockup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-userup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-reportdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-reporthigh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-reportup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Round-Button-userdown.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
