@@ -113,16 +113,6 @@ namespace HairBeautyNWRC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Round_Button_caldown1 {
-            get {
-                object obj = ResourceManager.GetObject("Round-Button-caldown1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Round_Button_calmask {
             get {
                 object obj = ResourceManager.GetObject("Round-Button-calmask", resourceCulture);
@@ -293,9 +283,9 @@ namespace HairBeautyNWRC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Round_Button_userdown1 {
+        internal static System.Drawing.Bitmap Round_Button_userup {
             get {
-                object obj = ResourceManager.GetObject("Round-Button-userdown1", resourceCulture);
+                object obj = ResourceManager.GetObject("Round-Button-userup", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,9 +293,19 @@ namespace HairBeautyNWRC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Round_Button_userup {
+        internal static System.Drawing.Bitmap Round_Buttonh_bDown {
             get {
-                object obj = ResourceManager.GetObject("Round-Button-userup", resourceCulture);
+                object obj = ResourceManager.GetObject("Round Buttonh&bDown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Round_Buttonh_bUp {
+            get {
+                object obj = ResourceManager.GetObject("Round Buttonh&bUp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

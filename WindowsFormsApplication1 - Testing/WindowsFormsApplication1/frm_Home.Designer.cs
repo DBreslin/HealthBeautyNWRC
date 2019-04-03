@@ -35,6 +35,13 @@
             this.btn_LoadClient = new System.Windows.Forms.Button();
             this.btn_Schedule = new System.Windows.Forms.Button();
             this.pnl_Side = new System.Windows.Forms.Panel();
+            this.btnReports = new System.Windows.Forms.PictureBox();
+            this.btnUsers = new System.Windows.Forms.PictureBox();
+            this.btnClients = new System.Windows.Forms.PictureBox();
+            this.btnStock = new System.Windows.Forms.PictureBox();
+            this.btnSales = new System.Windows.Forms.PictureBox();
+            this.btnHome = new System.Windows.Forms.PictureBox();
+            this.btnSch = new System.Windows.Forms.PictureBox();
             this.btn_Test = new System.Windows.Forms.Button();
             this.btn_Reports = new System.Windows.Forms.Button();
             this.btn_Sales = new System.Windows.Forms.Button();
@@ -55,6 +62,13 @@
             this.pnl_Home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_Side.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReports)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUsers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClients)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nWRC_HairBeautyDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             this.pnl_top.SuspendLayout();
@@ -88,7 +102,7 @@
             // 
             this.btn_LoadClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_LoadClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LoadClient.Location = new System.Drawing.Point(44, 242);
+            this.btn_LoadClient.Location = new System.Drawing.Point(7, 295);
             this.btn_LoadClient.Name = "btn_LoadClient";
             this.btn_LoadClient.Size = new System.Drawing.Size(166, 86);
             this.btn_LoadClient.TabIndex = 0;
@@ -100,7 +114,7 @@
             // 
             this.btn_Schedule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Schedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Schedule.Location = new System.Drawing.Point(48, 174);
+            this.btn_Schedule.Location = new System.Drawing.Point(60, 276);
             this.btn_Schedule.Name = "btn_Schedule";
             this.btn_Schedule.Size = new System.Drawing.Size(162, 86);
             this.btn_Schedule.TabIndex = 2;
@@ -111,6 +125,13 @@
             // pnl_Side
             // 
             this.pnl_Side.BackColor = System.Drawing.Color.White;
+            this.pnl_Side.Controls.Add(this.btnReports);
+            this.pnl_Side.Controls.Add(this.btnUsers);
+            this.pnl_Side.Controls.Add(this.btnClients);
+            this.pnl_Side.Controls.Add(this.btnStock);
+            this.pnl_Side.Controls.Add(this.btnSales);
+            this.pnl_Side.Controls.Add(this.btnHome);
+            this.pnl_Side.Controls.Add(this.btnSch);
             this.pnl_Side.Controls.Add(this.btn_Test);
             this.pnl_Side.Controls.Add(this.btn_Reports);
             this.pnl_Side.Controls.Add(this.btn_Sales);
@@ -125,11 +146,112 @@
             this.pnl_Side.Size = new System.Drawing.Size(229, 493);
             this.pnl_Side.TabIndex = 2;
             // 
+            // btnReports
+            // 
+            this.btnReports.BackColor = System.Drawing.Color.Transparent;
+            this.btnReports.BackgroundImage = global::HairBeautyNWRC.Properties.Resources.Round_Button_reportup;
+            this.btnReports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReports.Location = new System.Drawing.Point(-3, 382);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(119, 109);
+            this.btnReports.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnReports.TabIndex = 17;
+            this.btnReports.TabStop = false;
+            this.btnReports.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnReports_MouseDown);
+            this.btnReports.MouseLeave += new System.EventHandler(this.btnReports_MouseLeave);
+            this.btnReports.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnReports_MouseMove);
+            this.btnReports.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnReports_MouseUp);
+            // 
+            // btnUsers
+            // 
+            this.btnUsers.BackColor = System.Drawing.Color.Transparent;
+            this.btnUsers.BackgroundImage = global::HairBeautyNWRC.Properties.Resources.Round_Button_userup;
+            this.btnUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnUsers.Location = new System.Drawing.Point(110, 351);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(119, 109);
+            this.btnUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnUsers.TabIndex = 16;
+            this.btnUsers.TabStop = false;
+            this.btnUsers.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnUsers_MouseDown);
+            this.btnUsers.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnUsers_MouseUp);
+            // 
+            // btnClients
+            // 
+            this.btnClients.BackColor = System.Drawing.Color.Transparent;
+            this.btnClients.BackgroundImage = global::HairBeautyNWRC.Properties.Resources.Round_Button_clientsup;
+            this.btnClients.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClients.Location = new System.Drawing.Point(0, 351);
+            this.btnClients.Name = "btnClients";
+            this.btnClients.Size = new System.Drawing.Size(119, 109);
+            this.btnClients.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnClients.TabIndex = 15;
+            this.btnClients.TabStop = false;
+            this.btnClients.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnClients_MouseDown);
+            this.btnClients.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnClients_MouseUp);
+            // 
+            // btnStock
+            // 
+            this.btnStock.BackColor = System.Drawing.Color.Transparent;
+            this.btnStock.BackgroundImage = global::HairBeautyNWRC.Properties.Resources.Round_Button_stockup;
+            this.btnStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnStock.Location = new System.Drawing.Point(110, 327);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Size = new System.Drawing.Size(119, 109);
+            this.btnStock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnStock.TabIndex = 14;
+            this.btnStock.TabStop = false;
+            this.btnStock.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnStock_MouseDown);
+            this.btnStock.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnStock_MouseUp);
+            // 
+            // btnSales
+            // 
+            this.btnSales.BackColor = System.Drawing.Color.Transparent;
+            this.btnSales.BackgroundImage = global::HairBeautyNWRC.Properties.Resources.Round_Button_salesup;
+            this.btnSales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSales.Location = new System.Drawing.Point(3, 327);
+            this.btnSales.Name = "btnSales";
+            this.btnSales.Size = new System.Drawing.Size(119, 109);
+            this.btnSales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSales.TabIndex = 13;
+            this.btnSales.TabStop = false;
+            this.btnSales.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnSales_MouseDown);
+            this.btnSales.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnSales_MouseUp);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.Transparent;
+            this.btnHome.BackgroundImage = global::HairBeautyNWRC.Properties.Resources.ButtonUp;
+            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnHome.Image = global::HairBeautyNWRC.Properties.Resources.Round_Buttonh_bUp;
+            this.btnHome.Location = new System.Drawing.Point(0, 161);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(119, 109);
+            this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnHome.TabIndex = 12;
+            this.btnHome.TabStop = false;
+            this.btnHome.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnHome_MouseDown);
+            this.btnHome.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnHome_MouseUp);
+            // 
+            // btnSch
+            // 
+            this.btnSch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSch.BackgroundImage = global::HairBeautyNWRC.Properties.Resources.Round_Button_calup;
+            this.btnSch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSch.Location = new System.Drawing.Point(110, 161);
+            this.btnSch.Name = "btnSch";
+            this.btnSch.Size = new System.Drawing.Size(119, 109);
+            this.btnSch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSch.TabIndex = 11;
+            this.btnSch.TabStop = false;
+            this.btnSch.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnSch_MouseDown);
+            this.btnSch.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnSch_MouseUp);
+            // 
             // btn_Test
             // 
             this.btn_Test.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Test.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Test.Location = new System.Drawing.Point(31, 203);
+            this.btn_Test.Location = new System.Drawing.Point(48, 410);
             this.btn_Test.Name = "btn_Test";
             this.btn_Test.Size = new System.Drawing.Size(166, 86);
             this.btn_Test.TabIndex = 9;
@@ -141,7 +263,7 @@
             // 
             this.btn_Reports.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Reports.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Reports.Location = new System.Drawing.Point(31, 288);
+            this.btn_Reports.Location = new System.Drawing.Point(28, 380);
             this.btn_Reports.Name = "btn_Reports";
             this.btn_Reports.Size = new System.Drawing.Size(166, 86);
             this.btn_Reports.TabIndex = 8;
@@ -152,7 +274,7 @@
             // 
             this.btn_Sales.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Sales.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Sales.Location = new System.Drawing.Point(39, 334);
+            this.btn_Sales.Location = new System.Drawing.Point(3, 350);
             this.btn_Sales.Name = "btn_Sales";
             this.btn_Sales.Size = new System.Drawing.Size(166, 86);
             this.btn_Sales.TabIndex = 7;
@@ -163,7 +285,7 @@
             // 
             this.btn_Stock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Stock.Location = new System.Drawing.Point(44, 380);
+            this.btn_Stock.Location = new System.Drawing.Point(60, 368);
             this.btn_Stock.Name = "btn_Stock";
             this.btn_Stock.Size = new System.Drawing.Size(166, 86);
             this.btn_Stock.TabIndex = 6;
@@ -174,7 +296,7 @@
             // 
             this.btn_Users.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Users.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Users.Location = new System.Drawing.Point(44, 305);
+            this.btn_Users.Location = new System.Drawing.Point(44, 334);
             this.btn_Users.Name = "btn_Users";
             this.btn_Users.Size = new System.Drawing.Size(166, 86);
             this.btn_Users.TabIndex = 5;
@@ -186,7 +308,7 @@
             // 
             this.btn_home.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_home.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_home.Location = new System.Drawing.Point(48, 203);
+            this.btn_home.Location = new System.Drawing.Point(28, 350);
             this.btn_home.Name = "btn_home";
             this.btn_home.Size = new System.Drawing.Size(162, 86);
             this.btn_home.TabIndex = 4;
@@ -310,6 +432,13 @@
             this.pnl_Home.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_Side.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnReports)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUsers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClients)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nWRC_HairBeautyDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             this.pnl_top.ResumeLayout(false);
@@ -344,5 +473,12 @@
         private System.Windows.Forms.Button btn_Reports;
         private System.Windows.Forms.Button btn_Sales;
         private System.Windows.Forms.Button btn_Test;
+        private System.Windows.Forms.PictureBox btnSch;
+        private System.Windows.Forms.PictureBox btnHome;
+        private System.Windows.Forms.PictureBox btnReports;
+        private System.Windows.Forms.PictureBox btnUsers;
+        private System.Windows.Forms.PictureBox btnClients;
+        private System.Windows.Forms.PictureBox btnStock;
+        private System.Windows.Forms.PictureBox btnSales;
     }
 }

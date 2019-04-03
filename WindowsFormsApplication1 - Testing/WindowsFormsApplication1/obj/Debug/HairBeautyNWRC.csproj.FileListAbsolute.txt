@@ -148,19 +148,109 @@ C:\Users\bre12073100\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testi
 C:\Users\bre12073100\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csproj.CoreCompileInputs.cache
 C:\Users\bre12073100\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\bre12073100\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\Users\Danny\Documents\GitHub\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
-C:\Users\Danny\Documents\GitHub\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\Users\Danny\Documents\GitHub\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\Danny\Documents\GitHub\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csprojAssemblyReference.cache
-C:\Users\Danny\Documents\GitHub\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Booking.resources
-C:\Users\Danny\Documents\GitHub\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Home.resources
-C:\Users\Danny\Documents\GitHub\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Login.resources
-C:\Users\Danny\Documents\GitHub\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.Properties.Resources.resources
-C:\Users\Danny\Documents\GitHub\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Clients.resources
-C:\Users\Danny\Documents\GitHub\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Schedule.resources
-C:\Users\Danny\Documents\GitHub\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Users.resources
-C:\Users\Danny\Documents\GitHub\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csproj.GenerateResource.cache
-C:\Users\Danny\Documents\GitHub\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csproj.CoreCompileInputs.cache
-C:\Users\Danny\Documents\GitHub\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\Danny\Documents\GitHub\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\Users\Danny\Documents\GitHub\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Cust_Btn.resources
+C:\Users\kelvi\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\kelvi\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\kelvi\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\kelvi\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csprojAssemblyReference.cache
+C:\Users\kelvi\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Booking.resources
+C:\Users\kelvi\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Home.resources
+C:\Users\kelvi\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Login.resources
+C:\Users\kelvi\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.Properties.Resources.resources
+C:\Users\kelvi\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Clients.resources
+C:\Users\kelvi\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Schedule.resources
+C:\Users\kelvi\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Users.resources
+C:\Users\kelvi\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csproj.GenerateResource.cache
+C:\Users\kelvi\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csproj.CoreCompileInputs.cache
+C:\Users\kelvi\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\kelvi\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\kelvi\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Stock.resources
+C:\Users\Danny\Desktop\Programming backups\Kelvin\NWRC_Bookings-master\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Danny\Desktop\Programming backups\Kelvin\NWRC_Bookings-master\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Danny\Desktop\Programming backups\Kelvin\NWRC_Bookings-master\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Danny\Desktop\Programming backups\Kelvin\NWRC_Bookings-master\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csprojAssemblyReference.cache
+C:\Users\Danny\Desktop\Programming backups\Kelvin\NWRC_Bookings-master\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Booking.resources
+C:\Users\Danny\Desktop\Programming backups\Kelvin\NWRC_Bookings-master\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Home.resources
+C:\Users\Danny\Desktop\Programming backups\Kelvin\NWRC_Bookings-master\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Login.resources
+C:\Users\Danny\Desktop\Programming backups\Kelvin\NWRC_Bookings-master\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.Properties.Resources.resources
+C:\Users\Danny\Desktop\Programming backups\Kelvin\NWRC_Bookings-master\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Clients.resources
+C:\Users\Danny\Desktop\Programming backups\Kelvin\NWRC_Bookings-master\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Schedule.resources
+C:\Users\Danny\Desktop\Programming backups\Kelvin\NWRC_Bookings-master\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Stock.resources
+C:\Users\Danny\Desktop\Programming backups\Kelvin\NWRC_Bookings-master\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Users.resources
+C:\Users\Danny\Desktop\Programming backups\Kelvin\NWRC_Bookings-master\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csproj.GenerateResource.cache
+C:\Users\Danny\Desktop\Programming backups\Kelvin\NWRC_Bookings-master\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csproj.CoreCompileInputs.cache
+C:\Users\Danny\Desktop\Programming backups\Kelvin\NWRC_Bookings-master\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Danny\Desktop\Programming backups\Kelvin\NWRC_Bookings-master\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\kelvi\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\kelvi\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\kelvi\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\kelvi\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csprojAssemblyReference.cache
+C:\Users\kelvi\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Booking.resources
+C:\Users\kelvi\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Home.resources
+C:\Users\kelvi\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Login.resources
+C:\Users\kelvi\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.Properties.Resources.resources
+C:\Users\kelvi\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Clients.resources
+C:\Users\kelvi\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Schedule.resources
+C:\Users\kelvi\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Stock.resources
+C:\Users\kelvi\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Users.resources
+C:\Users\kelvi\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csproj.GenerateResource.cache
+C:\Users\kelvi\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csproj.CoreCompileInputs.cache
+C:\Users\kelvi\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\kelvi\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\kelvi\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_StockAddEditDelete.resources
+C:\Users\con13079315\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\con13079315\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\con13079315\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\con13079315\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csprojAssemblyReference.cache
+C:\Users\con13079315\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Booking.resources
+C:\Users\con13079315\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Home.resources
+C:\Users\con13079315\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Login.resources
+C:\Users\con13079315\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.Properties.Resources.resources
+C:\Users\con13079315\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_StockAddEditDelete.resources
+C:\Users\con13079315\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Clients.resources
+C:\Users\con13079315\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Schedule.resources
+C:\Users\con13079315\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Stock.resources
+C:\Users\con13079315\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Users.resources
+C:\Users\con13079315\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csproj.GenerateResource.cache
+C:\Users\con13079315\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csproj.CoreCompileInputs.cache
+C:\Users\con13079315\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\con13079315\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csprojAssemblyReference.cache
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Booking.resources
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Home.resources
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Login.resources
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.Properties.Resources.resources
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_StockAddEditDelete.resources
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Clients.resources
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Schedule.resources
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Stock.resources
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Users.resources
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csproj.GenerateResource.cache
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csproj.CoreCompileInputs.cache
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings2\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Cust_Btn.resources
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_StockAddEditDelete.resources
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Cust_Btn.resources
+C:\Users\bre12073100\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Stock.resources
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csprojAssemblyReference.cache
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Booking.resources
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Home.resources
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_Login.resources
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.Properties.Resources.resources
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.frm_StockAddEditDelete.resources
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Clients.resources
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Cust_Btn.resources
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Schedule.resources
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Stock.resources
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Users.resources
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csproj.GenerateResource.cache
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.csproj.CoreCompileInputs.cache
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Danny\Source\Repos\NWRC_Bookings\WindowsFormsApplication1 - Testing\WindowsFormsApplication1\obj\Debug\HairBeautyNWRC.uc_Treatments.resources
