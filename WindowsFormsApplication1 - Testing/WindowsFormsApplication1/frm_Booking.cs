@@ -13,11 +13,11 @@ namespace HairBeautyNWRC
 {
     public partial class frm_Booking : Form
     {
-        SqlDataAdapter daClient, daClient2;
+        SqlDataAdapter daClient, daClient2, daTreat;
         DataSet dsNWRC_HairBeauty = new DataSet();
-        SqlCommandBuilder cmdBClient;
-        String connStr, sqlClient, sqlClient2;
-        DataRow drclient;
+        SqlCommandBuilder cmdBClient, cmdBTreat;
+        String connStr, sqlClient, sqlClient2, sqlTreat;
+        DataRow drclient, drTreat;
         private bool newClient = false;
         private System.Windows.Forms.ErrorProvider errP;
 
@@ -28,11 +28,14 @@ namespace HairBeautyNWRC
         {
             InitializeComponent();
             bookList = new List<String>();
+            lbl_salonInfo.Text = frm_Home.salon;
+            lbl_SalonNoInfo.Text = frm_Home.salonNo;
         }
         private void frm_Booking_FormClosing(Object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)
                 frm_Home.BookNo = (int.Parse(frm_Home.BookNo.ToString()) - 1).ToString();
+
         }
 
         private void frm_Booking_Load(object sender, EventArgs e)
@@ -42,11 +45,68 @@ namespace HairBeautyNWRC
             connStr = @"Data Source = .\SQLEXPRESS; Initial Catalog = NWRC_HairBeauty; Integrated Security = true";
             //connStr = @"Data Source = .; Initial Catalog = NWRC_HairBeauty; Integrated Security = true";
 
+
             sqlClient = @"SELECT * from Client";
             daClient = new SqlDataAdapter(sqlClient, connStr);
             cmdBClient = new SqlCommandBuilder(daClient);
             daClient.FillSchema(dsNWRC_HairBeauty, SchemaType.Source, "Client");
             daClient.Fill(dsNWRC_HairBeauty, "Client");
+
+            sqlTreat = @"SELECT * from Treatments";
+            daTreat = new SqlDataAdapter(sqlTreat, connStr);
+            cmdBTreat = new SqlCommandBuilder(daTreat);
+            daTreat.FillSchema(dsNWRC_HairBeauty, SchemaType.Source, "Treatments");
+            daTreat.Fill(dsNWRC_HairBeauty, "Treatments");
+
+            int treatCount = 0;
+            foreach (DataRow dr in dsNWRC_HairBeauty.Tables["Treatments"].Rows)
+            {
+                if (frm_Home.salon == "Hair")
+                {
+                    if (dr["TreatType"].ToString() == "Hairdressing")
+                        cb_Treatment.Items.Add(dr["TreatName"].ToString());
+                }
+                else
+                {
+                    if(treatCount==0)
+                    cb_Treatment.Items.Add("**************** Hand and Feet Treats ****************");
+
+                    if (dr["TreatType"].ToString() == "Hand and Feet Treats")
+                    {
+                        cb_Treatment.Items.Add(dr["TreatName"].ToString());
+                    }
+                }
+                treatCount++;
+            }
+            cb_Treatment.Items.Add("");
+            cb_Treatment.Items.Add("**************** Eye Treatments ****************");
+            foreach (DataRow dr2 in dsNWRC_HairBeauty.Tables["Treatments"].Rows)
+            {
+                    if (dr2["TreatType"].ToString() == "Eye Treatments")
+                        cb_Treatment.Items.Add(dr2["TreatName"].ToString());
+            }
+            cb_Treatment.Items.Add("");
+            cb_Treatment.Items.Add("**************** Facial Treatments ****************");
+            foreach (DataRow dr3 in dsNWRC_HairBeauty.Tables["Treatments"].Rows)
+            {
+                if (dr3["TreatType"].ToString() == "Facial Treatments")
+                    cb_Treatment.Items.Add(dr3["TreatName"].ToString());
+            }
+            cb_Treatment.Items.Add("");
+            cb_Treatment.Items.Add("**************** Body Treatments ****************");
+            foreach (DataRow dr4 in dsNWRC_HairBeauty.Tables["Treatments"].Rows)
+            {
+                if (dr4["TreatType"].ToString() == "Body Treatments")
+                    cb_Treatment.Items.Add(dr4["TreatName"].ToString());
+            }
+            cb_Treatment.Items.Add("");
+            cb_Treatment.Items.Add("**************** Waxing ****************");
+            foreach (DataRow dr5 in dsNWRC_HairBeauty.Tables["Treatments"].Rows)
+            {
+                if (dr5["TreatType"].ToString() == "Waxing")
+                    cb_Treatment.Items.Add(dr5["TreatName"].ToString());
+            }
+
 
             lbl_BookText.Text = frm_Home.BookNo.ToString();
 
@@ -54,6 +114,57 @@ namespace HairBeautyNWRC
             this.ActiveControl = txt_FindName;
             lbl_NoClient.Text = "That client is not registered on the system.\nPlease Register using the button below";
             btn_AddNewClient.Visible = true;
+
+            if (bookList.Count > 0)
+            {
+                lbl_BookText.Text = bookList[0].ToString();
+                txt_FindName.Text = bookList[1].ToString();
+                populateClient(txt_FindName.Text);
+
+                if (bookList[4] == "True")
+                    cb_1.Checked = true;
+                if (bookList[5] == "True")
+                    cb_2.Checked = true;
+                if (bookList[6] == "True")
+                    cb_3.Checked = true;
+                if (bookList[7] == "True")
+                    cb_4.Checked = true;
+                if (bookList[8] == "True")
+                    cb_5.Checked = true;
+                if (bookList[9] == "True")
+                    cb_6.Checked = true;
+                if (bookList[10] == "True")
+                    cb_7.Checked = true;
+                if (bookList[11] == "True")
+                    cb_8.Checked = true;
+                if (bookList[12] == "True")
+                    cb_9.Checked = true;
+                if (bookList[13] == "True")
+                    cb_10.Checked = true;
+                if (bookList[14] == "True")
+                    cb_11.Checked = true;
+                if (bookList[15] == "True")
+                    cb_12.Checked = true;
+                if (bookList[16] == "True")
+                    cb_13.Checked = true;
+                if (bookList[17] == "True")
+                    cb_14.Checked = true;
+                if (bookList[18] == "True")
+                    cb_15.Checked = true;
+                if (bookList[19] == "True")
+                    cb_16.Checked = true;
+                if (bookList[20] == "True")
+                    cb_17.Checked = true;
+                if (bookList[21] == "True")
+                    cb_18.Checked = true;
+                if (bookList[22] == "True")
+                    cb_19.Checked = true;
+                if (bookList[23] == "True")
+                    cb_20.Checked = true;
+                bookList.Clear();
+
+            }
+
         }
 
         private void btn_AddNewClient_Click(object sender, EventArgs e)
@@ -86,10 +197,10 @@ namespace HairBeautyNWRC
 
         private void btn_Multibook_Click(object sender, EventArgs e)
         {
-           
+
             if (lbl_ClientNoTextBook.Text != "")
             {
-                
+
                 drclient = dsNWRC_HairBeauty.Tables["Client"].Rows.Find(lbl_ClientNoTextBook.Text);
 
                 if (btn_Multibook.Text == "Edit Client")
@@ -101,115 +212,115 @@ namespace HairBeautyNWRC
                 }
                 else
                 {
-                    
-                        MyClient myClient = new MyClient();
-                        bool ok = true;
-                        errP.Clear();
 
-                        try
-                        { myClient.ClientNo = Convert.ToInt32(lbl_ClientNoTextBook.Text.Trim()); }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                            errP.SetError(lbl_ClientNoTextBook, MyEx.ToString());
-                        }
+                    MyClient myClient = new MyClient();
+                    bool ok = true;
+                    errP.Clear();
 
-                        try
-                        { myClient.Title = cmb_TitleBook.Text.Trim(); }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                            errP.SetError(cmb_TitleBook, MyEx.tostring());
-                        }
+                    try
+                    { myClient.ClientNo = Convert.ToInt32(lbl_ClientNoTextBook.Text.Trim()); }
+                    catch (MyException MyEx)
+                    {
+                        ok = false;
+                        errP.SetError(lbl_ClientNoTextBook, MyEx.ToString());
+                    }
 
-                        try
-                        { myClient.Surname = txt_SurnameBook.Text.Trim(); }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                            errP.SetError(txt_SurnameBook, MyEx.tostring());
-                        }
+                    try
+                    { myClient.Title = cmb_TitleBook.Text.Trim(); }
+                    catch (MyException MyEx)
+                    {
+                        ok = false;
+                        errP.SetError(cmb_TitleBook, MyEx.tostring());
+                    }
 
-                        try
-                        { myClient.Forename = txt_ForenameBook.Text.Trim(); }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                            errP.SetError(txt_ForenameBook, MyEx.tostring());
-                        }
+                    try
+                    { myClient.Surname = txt_SurnameBook.Text.Trim(); }
+                    catch (MyException MyEx)
+                    {
+                        ok = false;
+                        errP.SetError(txt_SurnameBook, MyEx.tostring());
+                    }
 
-                        try
-                        { myClient.Street = rt_StreetBook.Text.Trim(); }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                            errP.SetError(rt_StreetBook, MyEx.tostring());
-                        }
+                    try
+                    { myClient.Forename = txt_ForenameBook.Text.Trim(); }
+                    catch (MyException MyEx)
+                    {
+                        ok = false;
+                        errP.SetError(txt_ForenameBook, MyEx.tostring());
+                    }
 
-                        try
-                        { myClient.Town = txt_TownBook.Text.Trim(); }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                            errP.SetError(txt_TownBook, MyEx.tostring());
-                        }
+                    try
+                    { myClient.Street = rt_StreetBook.Text.Trim(); }
+                    catch (MyException MyEx)
+                    {
+                        ok = false;
+                        errP.SetError(rt_StreetBook, MyEx.tostring());
+                    }
 
-                        try
-                        { myClient.County = txt_CountyBook.Text.Trim(); }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                            errP.SetError(txt_CountyBook, MyEx.tostring());
-                        }
+                    try
+                    { myClient.Town = txt_TownBook.Text.Trim(); }
+                    catch (MyException MyEx)
+                    {
+                        ok = false;
+                        errP.SetError(txt_TownBook, MyEx.tostring());
+                    }
 
-                        try
-                        { myClient.Postcode = txt_PostcodeBook.Text.Trim(); }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                            errP.SetError(txt_PostcodeBook, MyEx.tostring());
-                        }
+                    try
+                    { myClient.County = txt_CountyBook.Text.Trim(); }
+                    catch (MyException MyEx)
+                    {
+                        ok = false;
+                        errP.SetError(txt_CountyBook, MyEx.tostring());
+                    }
 
-                        try
-                        { myClient.Country = txt_CountryBook.Text.Trim(); }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                            errP.SetError(txt_CountryBook, MyEx.tostring());
-                        }
+                    try
+                    { myClient.Postcode = txt_PostcodeBook.Text.Trim(); }
+                    catch (MyException MyEx)
+                    {
+                        ok = false;
+                        errP.SetError(txt_PostcodeBook, MyEx.tostring());
+                    }
 
-                        try
-                        { myClient.TelNo = txt_TelephoneBook.Text.Trim(); }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                            errP.SetError(txt_TelephoneBook, MyEx.tostring());
-                        }
+                    try
+                    { myClient.Country = txt_CountryBook.Text.Trim(); }
+                    catch (MyException MyEx)
+                    {
+                        ok = false;
+                        errP.SetError(txt_CountryBook, MyEx.tostring());
+                    }
 
-                        try
-                        { myClient.Email = txt_EmailBook.Text.Trim(); }
-                        catch (MyException MyEx)
-                        {
-                            ok = false;
-                            errP.SetError(txt_EmailBook, MyEx.tostring());
-                        }
+                    try
+                    { myClient.TelNo = txt_TelephoneBook.Text.Trim(); }
+                    catch (MyException MyEx)
+                    {
+                        ok = false;
+                        errP.SetError(txt_TelephoneBook, MyEx.tostring());
+                    }
 
-                        try
+                    try
+                    { myClient.Email = txt_EmailBook.Text.Trim(); }
+                    catch (MyException MyEx)
+                    {
+                        ok = false;
+                        errP.SetError(txt_EmailBook, MyEx.tostring());
+                    }
+
+                    try
+                    {
+                        if (chk_SkinBook.Checked)
                         {
-                            if (chk_SkinBook.Checked)
-                            {
-                                myClient.SkinTest = "Yes";
-                            }
-                            else
-                            {
-                                myClient.SkinTest = "No";
-                            }
+                            myClient.SkinTest = "Yes";
                         }
-                        catch (MyException MyEx)
+                        else
                         {
-                            ok = false;
-                            errP.SetError(chk_SkinBook, MyEx.tostring());
+                            myClient.SkinTest = "No";
                         }
+                    }
+                    catch (MyException MyEx)
+                    {
+                        ok = false;
+                        errP.SetError(chk_SkinBook, MyEx.tostring());
+                    }
                     if (newClient)
                     {
                         drclient = dsNWRC_HairBeauty.Tables["Client"].NewRow();
@@ -261,7 +372,7 @@ namespace HairBeautyNWRC
                         {
                             MessageBox.Show("" + ex.TargetSite + "" + ex.Message, "Error!", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
                         }
-                        
+
                     }
                     //Disable Form entries
                     formEnable(false);
@@ -269,7 +380,7 @@ namespace HairBeautyNWRC
                     btn_Multibook.Text = "Edit Client";
                 }
             }
-        
+
         }
 
         private void btn_CancelBook_Click(object sender, EventArgs e)
@@ -285,6 +396,11 @@ namespace HairBeautyNWRC
         private void lb_AvailClients_SelectedIndexChanged(object sender, EventArgs e)
         {
             String selectedName = lb_AvailClients.GetItemText(lb_AvailClients.SelectedItem);
+            populateClient(selectedName);
+        }
+
+        private void populateClient(string selectedName)
+        {
             string[] name = selectedName.Split(' ');
             string forename = name[0];
             string surname = name[1];
@@ -331,7 +447,6 @@ namespace HairBeautyNWRC
                 chk_SkinBook.Checked = false;
             }
         }
-
         private void txt_FindSur_TextChanged(object sender, EventArgs e)
         {
 
@@ -374,7 +489,10 @@ namespace HairBeautyNWRC
 
         private void btn_MakeBook_Click(object sender, EventArgs e)
         {
- 
+            // -- Set bool to true initially
+            uc_Schedule.canMakeBook = true;
+            int totalcells = 0;
+
             bookList.Add(lbl_BookText.Text.ToString());
             bookList.Add(lbl_ClientNoTextBook.Text);
             bookList.Add(cmb_TitleBook.Text);
@@ -402,7 +520,30 @@ namespace HairBeautyNWRC
             bookList.Add(cb_19.Checked.ToString());
             bookList.Add(cb_20.Checked.ToString());
 
-            this.Dispose();
+            for (int i = 25; i > 5; i--)
+            {
+                if (bookList[i].ToString() == "False")
+                {
+                    totalcells++;
+                }
+                else
+                    //*************************** this needs fixed cant reset to zero needs to work backwards
+                    break;
+            }
+
+            int infield = (uc_Schedule.rowindex + 19) - totalcells;
+
+            if (infield <= 48)
+            {
+                //uc_Schedule.canMakeBook = true; - only need to set to true once delete this if it works 
+                this.Dispose();
+            }
+            else
+            {
+                bookList.Clear();
+                MessageBox.Show("You cannot make this booking We close at 9pm !!");
+                uc_Schedule.canMakeBook = false;
+            }
         }
 
         private void formEnable(bool result)
@@ -436,3 +577,9 @@ namespace HairBeautyNWRC
         }
     }
 }
+
+
+
+
+
+

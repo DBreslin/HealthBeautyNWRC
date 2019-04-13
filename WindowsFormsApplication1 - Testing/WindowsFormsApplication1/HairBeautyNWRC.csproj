@@ -65,9 +65,13 @@
     </Compile>
     <Compile Include="MyClient.cs" />
     <Compile Include="MyException.cs" />
+    <Compile Include="MyStock.cs" />
     <Compile Include="MyTreatment.cs" />
     <Compile Include="MyUser.cs" />
     <Compile Include="MyValidation.cs" />
+    <Compile Include="NWRC_HairBeautyDataSet.cs">
+      <DependentUpon>NWRC_HairBeautyDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="NWRC_HairBeautyDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -259,6 +263,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Round-Button-userup1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_48x48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

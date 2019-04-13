@@ -18,6 +18,7 @@ namespace HairBeautyNWRC
         }
         // Keep track of whether the button is pressed.
         private bool ClickMeButtonIsPressed = false;   // for better control
+
         private void btn_Cus_Sched_MouseDown(object sender, MouseEventArgs e)
         {
                 ClickMeButtonIsPressed = true;

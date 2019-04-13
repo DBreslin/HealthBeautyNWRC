@@ -34,8 +34,8 @@ namespace HairBeautyNWRC
 
             errP = new ErrorProvider();
 
-            connStr = @"Data Source = .\SQLEXPRESS; Initial Catalog = NWRC_HairBeauty; Integrated Security = true";
-            //connStr = @"Data Source = .; Initial Catalog = NWRC_HairBeauty; Integrated Security = true";
+            //connStr = @"Data Source = .\SQLEXPRESS; Initial Catalog = NWRC_HairBeauty; Integrated Security = true";
+            connStr = @"Data Source = .; Initial Catalog = NWRC_HairBeauty; Integrated Security = true";
 
             sqlUser = @"SELECT * from UserLogin";
             daUser = new SqlDataAdapter(sqlUser, connStr);
@@ -59,7 +59,7 @@ namespace HairBeautyNWRC
             // Set Font Size 
             dgv_Users.Font = new Font("Times", 10);
 
-            // Keep certian Columns a set size
+            // Keep certain Columns a set size
            /* dgv_Users.Columns[0].Width = 75;
             dgv_Users.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             dgv_Users.Columns[1].Width = 40;
@@ -72,9 +72,10 @@ namespace HairBeautyNWRC
             //Fill Columns to panel view
             dgv_Users.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            pnl_AddUser.Width = (frm_Home.screenWidth/2);
             pnl_AddUser.Height = (frm_Home.screenHeight / 2);
-            pnl_AddUser.Location = new Point((frm_Home.screenWidth/2)-(pnl_AddUser.Width/2), tp_AddUser.Height/2);
+            pnl_AddUser.Location = new Point((frm_Home.screenWidth/2)-(pnl_AddUser.Width/2 + 100), tp_AddUser.Height/3) ;
+            pnl_EditUser.Height = (frm_Home.screenHeight / 2);
+            pnl_EditUser.Location = new Point((frm_Home.screenWidth / 2) - (pnl_AddUser.Width / 2 + 100), tp_AddUser.Height / 3);
         }
         private void btn_AddUser_Click(object sender, EventArgs e)
         {

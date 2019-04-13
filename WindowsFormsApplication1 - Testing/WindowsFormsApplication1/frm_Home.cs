@@ -14,11 +14,14 @@ namespace HairBeautyNWRC
 
     public partial class frm_Home : Form
     {
-        public static String selDate; // Public String to show the selected Date on the calendar
-        public static String BookNo = "";
+        public static string selDate; // Public String to show the selected Date on the calendar
+        public static string salon ;
+        public static string salonNo;
+        public static string BookNo = "";
         public static int screenWidth = 0;
         public static int screenHeight = 0;
         private bool scheduleClicked = false;
+        private bool firstload = true;
 
         uc_Schedule schInstance = new uc_Schedule();
         uc_Clients clientInstance = new uc_Clients();
@@ -98,28 +101,14 @@ namespace HairBeautyNWRC
             btnUsers.Location = new Point(pnl_Side.Width / 3 - button_Wth / 5, ((Cal_Month.Height + pnl_TopSeperation.Height + (button_Hgt + 20) * 5)));
             btnReports.Size = new Size(button_Wth, button_Hgt);
             btnReports.Location = new Point(pnl_Side.Width / 3 - button_Wth / 5, ((Cal_Month.Height + pnl_TopSeperation.Height + (button_Hgt + 20) * 6)));
-            //btn_LoadClient.Size = new Size(button_Wth, button_Hgt);
-            //btn_Schedule.Size = new Size(button_Wth, button_Hgt);
-            //btn_home.Size = new Size(button_Wth, button_Hgt);
-            //btn_Users.Size = new Size(button_Wth, button_Hgt);
-            //btn_Stock.Size = new Size(button_Wth, button_Hgt);
-            //btn_Sales.Size = new Size(button_Wth, button_Hgt);
-            //btn_Reports.Size = new Size(button_Wth, button_Hgt);
-            //btn_Test.Size = new Size(button_Wth, button_Hgt);
-            btn_LoadClient.Visible = false;
-            btn_Schedule.Visible = false;
-            btn_home.Visible = false;
-            btn_Users.Visible = false;
-            btn_Stock.Visible = false;
-            btn_Sales.Visible = false;
-            btn_Reports.Visible = false;
-            btn_Test.Visible = false;
+            btn_Test.Visible = true;
+            btn_Test.Location = new Point(pnl_Side.Width / 3 - button_Wth / 5, ((Cal_Month.Height + pnl_TopSeperation.Height + (button_Hgt + 20) * 7)));
 
             /// <summary>
             /// This is the location of the buttons based on panel size and button size ------------ this is an example of method notation.
             /// </summary>
 
-            
+
             //btn_home.Location = new Point(pnl_Side.Width / 2 - btn_LoadClient.Width / 2 - pnl_SideSeperation.Width, (Cal_Month.Height + pnl_TopSeperation.Height + button_Hgt));
             //btn_Schedule.Location = new Point(pnl_Side.Width/2 - btn_LoadClient.Width/2 - pnl_SideSeperation.Width, (Cal_Month.Height + pnl_TopSeperation.Height+ (button_Hgt * 2)));
             //btn_Sales.Location = new Point(pnl_Side.Width / 2 - btn_LoadClient.Width / 2 - pnl_SideSeperation.Width, (Cal_Month.Height + pnl_TopSeperation.Height + (button_Hgt * 3)));
@@ -131,9 +120,23 @@ namespace HairBeautyNWRC
 
             lbl_DayDate.Location = new Point(pnl_top.Width / 2 - lbl_DayDate.Width / 2, pnl_top.Height / 2 - lbl_DayDate.Height / 2);
             lbl_DayDate.Text = Cal_Month.SelectionRange.Start.DayOfWeek + " "
-                        + Cal_Month.SelectionRange.Start.ToLongDateString();
+                       + Cal_Month.SelectionRange.Start.ToLongDateString();
+            
+            cb_Salon.SelectedIndex = 1;
+            lbl_SalonSelection.Location = new Point(screenWidth - pb_NwrcLogo.Width * 2, pnl_top.Height / 2 - lbl_SalonSelection.Height);
+            lbl_SalonNoSelection.Location = new Point(screenWidth-pb_NwrcLogo.Width*2, pnl_top.Height / 2 + lbl_SalonNoSelection.Height/2 - pnl_TopSeperation.Height);
 
+            salon = cb_Salon.SelectedItem.ToString();
+            if (rb_Salon1.Checked)
+                salonNo = rb_Salon1.Text.ToString();
+            else if (rb_Salon2.Checked)
+                salonNo = rb_Salon2.Text.ToString();
+            else if (rb_Salon3.Checked)
+                salonNo = rb_Salon3.Text.ToString();
+            else if (rb_Salon4.Checked)
+                salonNo = rb_Salon4.Text.ToString();
             selectDate();
+            firstload = false;
         }
 
         private void btn_LoadClient_Click(object sender, EventArgs e)
@@ -195,24 +198,13 @@ namespace HairBeautyNWRC
             BookNo = schInstance.bookingNumber.ToString();
         }
 
-        private void btn_Users_Click(object sender, EventArgs e)
-        {
-            resetCal();
-            userInstance.Dispose();
-
-            userInstance = new uc_Users();
-
-            pnl_Home.Controls.Add(userInstance);
-            userInstance.Dock = DockStyle.Fill;
-            userInstance.BringToFront();
-            userInstance.Show();
-        }
         private void clearControls()
         {
             schInstance.Dispose();
             clientInstance.Dispose();
             userInstance.Dispose();
             stockInstance.Dispose();
+            treatInstance.Dispose();
             Cal_Month.Enabled = false;
         }
 
@@ -225,42 +217,12 @@ namespace HairBeautyNWRC
 
         private void btn_Test_Click(object sender, EventArgs e)
         {
-            userButton = new uc_Cust_Btn();
+            //userButton = new uc_Cust_Btn();
 
-            pnl_Home.Controls.Add(userButton);
-            userButton.Dock = DockStyle.Fill;
-            userButton.BringToFront();
-            userButton.Show();
-        }
-
-        private void cust_Sch_Click(object sender, EventArgs e)
-        {
-            resetCal();
-            Cal_Month.Enabled = true; // should I only ,make calendar available in schedule ?????
-            updateSched();
-            scheduleClicked = true;
-        }
-
-        private void cust_Sch_MouseDown(object sender, MouseEventArgs e)
-        {
-            resetCal();
-            Cal_Month.Enabled = true; // should I only ,make calendar available in schedule ?????
-            updateSched();
-            scheduleClicked = true;
-        }
-        // Change picture to make button behave like a button --- to be replaced by user control
-        private void btnHome_MouseDown(object sender, MouseEventArgs e)
-        {
-            btnHome.Image = Properties.Resources.Round_Buttonh_bDown;
-        }
-
-        private void btnHome_MouseUp(object sender, MouseEventArgs e)
-        {
-            btnHome.Image = Properties.Resources.Round_Buttonh_bUp;
-            resetCal();
-            clearControls();
-            scheduleClicked = false;
-
+            //pnl_Home.Controls.Add(userButton);
+            //userButton.Dock = DockStyle.Fill;
+            //userButton.BringToFront();
+            //userButton.Show();
 
             //--- Extra testing will be removed or assigned to a button
             treatInstance = new uc_Treatments();
@@ -269,107 +231,250 @@ namespace HairBeautyNWRC
             treatInstance.Dock = DockStyle.Fill;
             treatInstance.BringToFront();
             treatInstance.Show();
+            //****************************************************************************
         }
 
-        private void btnSch_MouseDown(object sender, MouseEventArgs e)
+
+
+        private void customBtn_MouseDown(object sender, MouseEventArgs e)
         {
-            btnSch.Image = Properties.Resources.Round_Button_caldown;
+            PictureBox btnTemp = new PictureBox();
+            btnTemp = (PictureBox)sender;
+            buttonDown(btnTemp);
         }
 
-        private void btnSch_MouseUp(object sender, MouseEventArgs e)
+        private void customBtn_MouseUp(object sender, MouseEventArgs e)
         {
-            btnSch.Image = Properties.Resources.Round_Button_calup;
-            resetCal();
-            Cal_Month.Enabled = true; // should I only ,ake calendar available in schedule ?????
-            updateSched();
-            scheduleClicked = true;
-        }
-
-        private void btnSales_MouseDown(object sender, MouseEventArgs e)
-        {
-            btnSales.Image = Properties.Resources.Round_Button_salesdown;
-        }
-
-        private void btnSales_MouseUp(object sender, MouseEventArgs e)
-        {
-            btnSales.Image = Properties.Resources.Round_Button_salesup;
-        }
-
-        private void btnStock_MouseDown(object sender, MouseEventArgs e)
-        {
-            btnStock.Image = Properties.Resources.Round_Button_stockdown;
-        }
-
-        private void btnStock_MouseUp(object sender, MouseEventArgs e)
-        {
-            btnStock.Image = Properties.Resources.Round_Button_stockup;
-            resetCal();
-            stockInstance.Dispose();
-
-            stockInstance = new uc_Stock();
-
-            pnl_Home.Controls.Add(stockInstance);
-            stockInstance.Dock = DockStyle.Fill;
-            stockInstance.BringToFront();
-            stockInstance.Show();
-        }
-
-        private void btnClients_MouseDown(object sender, MouseEventArgs e)
-        {
-            btnClients.Image = Properties.Resources.Round_Button_clientsdown;
-        }
-
-        private void btnClients_MouseUp(object sender, MouseEventArgs e)
-        {
-            btnClients.Image = Properties.Resources.Round_Button_clientsup;
-            resetCal();
-            clientInstance.Dispose();
-
-            clientInstance = new uc_Clients();
-
-            pnl_Home.Controls.Add(clientInstance);
-            clientInstance.Dock = DockStyle.Fill;
-            clientInstance.BringToFront();
-            clientInstance.Show();
-        }
-
-        private void btnUsers_MouseDown(object sender, MouseEventArgs e)
-        {
-            btnUsers.Image = Properties.Resources.Round_Button_userdown;
-        }
-
-        private void btnUsers_MouseUp(object sender, MouseEventArgs e)
-        {
-            btnUsers.Image = Properties.Resources.Round_Button_userup;
-            resetCal();
-            userInstance.Dispose();
-
-            userInstance = new uc_Users();
-
-            pnl_Home.Controls.Add(userInstance);
-            userInstance.Dock = DockStyle.Fill;
-            userInstance.BringToFront();
-            userInstance.Show();
-        }
-
-        private void btnReports_MouseDown(object sender, MouseEventArgs e)
-        {
-            btnReports.Image = Properties.Resources.Round_Button_reportdown;
-        }
-
-        private void btnReports_MouseUp(object sender, MouseEventArgs e)
-        {
+            PictureBox btnTemp = new PictureBox();
+            btnTemp = (PictureBox)sender;
             btnReports.Image = Properties.Resources.Round_Button_reportup;
+            buttonUp(btnTemp);
         }
 
-        private void btnReports_MouseMove(object sender, MouseEventArgs e)
+        private void customBtn_MouseMove(object sender, MouseEventArgs e)
         {
-            btnReports.Image = Properties.Resources.Round_Button_reporthigh;
+            PictureBox btnTemp = new PictureBox();
+            btnTemp = (PictureBox)sender;
+            buttonHigh(btnTemp);
+            //btnTemp.Image = imageList1.Images[Convert.ToInt32(btnTemp.Tag)]; // to pull from image list based on location number 
         }
 
-        private void btnReports_MouseLeave(object sender, EventArgs e)
+        private void customBtn_MouseLeave(object sender, EventArgs e)
         {
-            btnReports.Image = Properties.Resources.Round_Button_reportup;
+            PictureBox btnTemp = new PictureBox();
+            btnTemp = (PictureBox)sender;
+            buttonReset(btnTemp);
+        }
+
+
+        // Below Possibly be replaced with custom uc version if we have the time !!!
+        private void buttonUp(PictureBox buttonName)
+        {
+
+            switch (buttonName.Name)
+            {
+                case "btnHome":
+                    //Update Button Picture
+                    buttonName.Image = Properties.Resources.Round_Buttonh_bUp;
+                    // Reset Calendar and clear controls
+                    resetCal();
+                    clearControls();
+                    scheduleClicked = false;
+                    //*************************************************************************
+                   
+                    break;
+
+                case "btnSch":
+                    //Update Button Picture
+                    buttonName.Image = Properties.Resources.Round_Button_calup;
+                    //Reset Calendar
+                    resetCal();
+                    Cal_Month.Enabled = true; // should I only ,make calendar available in schedule ?????
+                    updateSched();
+                    scheduleClicked = true;
+                    break;
+
+                case "btnSales":
+                    //Update Button Picture
+                    buttonName.Image = Properties.Resources.Round_Button_salesup;
+                    break;
+
+                case "btnStock":
+                    //Update Button Picture
+                    buttonName.Image = Properties.Resources.Round_Button_stockup;
+                    //Reset Calendar and dispose of running Instance
+                    resetCal();
+                    stockInstance.Dispose();
+                    //Redo updated instance and populate Panel
+                    stockInstance = new uc_Stock();
+                    pnl_Home.Controls.Add(stockInstance);
+                    stockInstance.Dock = DockStyle.Fill;
+                    stockInstance.BringToFront();
+                    stockInstance.Show();
+                    break;
+
+                case "btnClients":
+                    //Update Button Picture
+                    buttonName.Image = Properties.Resources.Round_Button_clientsup;
+                    //Reset Calendar and dispose of running Instance
+                    resetCal();
+                    clientInstance.Dispose();
+                    //Redo updated instance and populate Panel
+                    clientInstance = new uc_Clients();
+                    pnl_Home.Controls.Add(clientInstance);
+                    clientInstance.Dock = DockStyle.Fill;
+                    clientInstance.BringToFront();
+                    clientInstance.Show();
+                    break;
+
+                case "btnUsers":
+                    //Update Button Picture
+                    buttonName.Image = Properties.Resources.Round_Button_userup;
+                    //Reset Calendar and dispose of running Instance
+                    resetCal();
+                    userInstance.Dispose();
+                    //Redo updated instance and populate Panel
+                    userInstance = new uc_Users();
+                    pnl_Home.Controls.Add(userInstance);
+                    userInstance.Dock = DockStyle.Fill;
+                    userInstance.BringToFront();
+                    userInstance.Show();
+                    break;
+
+                case "btnReports":
+                    //Update Button Picture
+                    buttonName.Image = Properties.Resources.Round_Button_reportup;
+                    break;
+
+                default:
+                    MessageBox.Show("Nothing Was Clicked !"); // shows button clicked
+                    break;
+            }
+
+        }
+        private void buttonDown(PictureBox buttonName)
+        {
+
+            switch (buttonName.Name)
+            {
+                case "btnHome":
+                    buttonName.Image = Properties.Resources.Round_Buttonh_bDown;
+                    break;
+                case "btnSch":
+                    buttonName.Image = Properties.Resources.Round_Button_caldown;
+                    break;
+                case "btnSales":
+                    buttonName.Image = Properties.Resources.Round_Button_salesdown;
+                    break;
+                case "btnStock":
+                    buttonName.Image = Properties.Resources.Round_Button_stockdown;
+                    break;
+                case "btnClients":
+                    buttonName.Image = Properties.Resources.Round_Button_clientsdown;
+                    break;
+                case "btnUsers":
+                    buttonName.Image = Properties.Resources.Round_Button_userdown;
+                    break;
+                case "btnReports":
+                    buttonName.Image = Properties.Resources.Round_Button_reportdown;
+                    break;
+
+                default:
+                    MessageBox.Show("Nothing Was Clicked !"); // shows button clicked
+                    break;
+            }
+
+        }
+        private void buttonHigh(PictureBox buttonName)
+        {
+
+            switch (buttonName.Name)
+            {
+                case "btnHome":
+                    
+                    // Insert Picture Change code here
+                    break;
+                case "btnSch":
+                    // Insert Picture Change code here
+                    break;
+                case "btnSales":
+                    // Insert Picture Change code here
+                    break;
+                case "btnStock":
+                    // Insert Picture Change code here
+                    break;
+                case "btnClients":
+                    // Insert Picture Change code here
+                    break;
+                case "btnUsers":
+                    // Insert Picture Change code here
+                    break;
+                case "btnReports":
+                    buttonName.Image = Properties.Resources.Round_Button_reporthigh;
+                    break;
+
+                default:
+                    MessageBox.Show("Nothing Was Clicked !"); // shows button clicked
+                    break;
+            }
+
+        }
+        private void buttonReset(PictureBox buttonName)
+        {
+
+            switch (buttonName.Name)
+            {
+                case "btnHome":
+                    buttonName.Image = Properties.Resources.Round_Buttonh_bUp;
+                    break;
+                case "btnSch":
+                    buttonName.Image = Properties.Resources.Round_Button_calup;
+                    break;
+                case "btnSales":
+                    buttonName.Image = Properties.Resources.Round_Button_salesup;
+                    break;
+                case "btnStock":
+                    buttonName.Image = Properties.Resources.Round_Button_stockup;
+                    break;
+                case "btnClients":
+                    buttonName.Image = Properties.Resources.Round_Button_clientsup;
+                    break;
+                case "btnUsers":
+                    buttonName.Image = Properties.Resources.Round_Button_userup;
+                    break;
+                case "btnReports":
+                    buttonName.Image = Properties.Resources.Round_Button_reportup;
+                    break;
+
+                default:
+                    MessageBox.Show("Nothing Was Clicked !"); // shows button clicked
+                    break;
+            }
+
+        }
+
+        private void cb_Salon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (scheduleClicked)
+            {
+                salon = cb_Salon.SelectedItem.ToString();
+                lbl_SalonSelection.Text = salon;
+                if (!firstload)
+                    updateSched();
+            }
+        }
+
+        private void rb_Salon_CheckedChanged(object sender, EventArgs e)
+        {
+            if (scheduleClicked)
+            {
+                RadioButton radioTemp = new RadioButton();
+                radioTemp = (RadioButton)sender;
+                salonNo = radioTemp.Text.ToString();
+                lbl_SalonNoSelection.Text = salonNo;
+                if (scheduleClicked)
+                    updateSched();
+            }
         }
     }   
 }

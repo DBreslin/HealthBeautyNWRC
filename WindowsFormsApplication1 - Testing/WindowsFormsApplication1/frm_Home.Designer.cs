@@ -32,8 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Home));
             this.pnl_Home = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_LoadClient = new System.Windows.Forms.Button();
-            this.btn_Schedule = new System.Windows.Forms.Button();
             this.pnl_Side = new System.Windows.Forms.Panel();
             this.btnReports = new System.Windows.Forms.PictureBox();
             this.btnUsers = new System.Windows.Forms.PictureBox();
@@ -43,11 +41,6 @@
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.btnSch = new System.Windows.Forms.PictureBox();
             this.btn_Test = new System.Windows.Forms.Button();
-            this.btn_Reports = new System.Windows.Forms.Button();
-            this.btn_Sales = new System.Windows.Forms.Button();
-            this.btn_Stock = new System.Windows.Forms.Button();
-            this.btn_Users = new System.Windows.Forms.Button();
-            this.btn_home = new System.Windows.Forms.Button();
             this.Cal_Month = new System.Windows.Forms.MonthCalendar();
             this.pnl_TopSeperation = new System.Windows.Forms.Panel();
             this.pnl_SideSeperation = new System.Windows.Forms.Panel();
@@ -55,6 +48,13 @@
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientTableAdapter = new HairBeautyNWRC.NWRC_HairBeautyDataSetTableAdapters.ClientTableAdapter();
             this.pnl_top = new System.Windows.Forms.Panel();
+            this.lbl_SalonSelection = new System.Windows.Forms.Label();
+            this.lbl_SalonNoSelection = new System.Windows.Forms.Label();
+            this.rb_Salon4 = new System.Windows.Forms.RadioButton();
+            this.rb_Salon3 = new System.Windows.Forms.RadioButton();
+            this.rb_Salon2 = new System.Windows.Forms.RadioButton();
+            this.rb_Salon1 = new System.Windows.Forms.RadioButton();
+            this.cb_Salon = new System.Windows.Forms.ComboBox();
             this.lbl_DayDate = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pb_hb = new System.Windows.Forms.PictureBox();
@@ -98,30 +98,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // btn_LoadClient
-            // 
-            this.btn_LoadClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_LoadClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LoadClient.Location = new System.Drawing.Point(7, 295);
-            this.btn_LoadClient.Name = "btn_LoadClient";
-            this.btn_LoadClient.Size = new System.Drawing.Size(166, 86);
-            this.btn_LoadClient.TabIndex = 0;
-            this.btn_LoadClient.Text = "Clients";
-            this.btn_LoadClient.UseVisualStyleBackColor = true;
-            this.btn_LoadClient.Click += new System.EventHandler(this.btn_LoadClient_Click);
-            // 
-            // btn_Schedule
-            // 
-            this.btn_Schedule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Schedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Schedule.Location = new System.Drawing.Point(60, 276);
-            this.btn_Schedule.Name = "btn_Schedule";
-            this.btn_Schedule.Size = new System.Drawing.Size(162, 86);
-            this.btn_Schedule.TabIndex = 2;
-            this.btn_Schedule.Text = "Schedule";
-            this.btn_Schedule.UseVisualStyleBackColor = true;
-            this.btn_Schedule.Click += new System.EventHandler(this.btn_Schedule_Click);
-            // 
             // pnl_Side
             // 
             this.pnl_Side.BackColor = System.Drawing.Color.White;
@@ -133,17 +109,10 @@
             this.pnl_Side.Controls.Add(this.btnHome);
             this.pnl_Side.Controls.Add(this.btnSch);
             this.pnl_Side.Controls.Add(this.btn_Test);
-            this.pnl_Side.Controls.Add(this.btn_Reports);
-            this.pnl_Side.Controls.Add(this.btn_Sales);
-            this.pnl_Side.Controls.Add(this.btn_Stock);
-            this.pnl_Side.Controls.Add(this.btn_Users);
-            this.pnl_Side.Controls.Add(this.btn_home);
             this.pnl_Side.Controls.Add(this.Cal_Month);
-            this.pnl_Side.Controls.Add(this.btn_Schedule);
-            this.pnl_Side.Controls.Add(this.btn_LoadClient);
             this.pnl_Side.Location = new System.Drawing.Point(5, 131);
             this.pnl_Side.Name = "pnl_Side";
-            this.pnl_Side.Size = new System.Drawing.Size(229, 493);
+            this.pnl_Side.Size = new System.Drawing.Size(229, 707);
             this.pnl_Side.TabIndex = 2;
             // 
             // btnReports
@@ -151,16 +120,16 @@
             this.btnReports.BackColor = System.Drawing.Color.Transparent;
             this.btnReports.BackgroundImage = global::HairBeautyNWRC.Properties.Resources.Round_Button_reportup;
             this.btnReports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnReports.Location = new System.Drawing.Point(-3, 382);
+            this.btnReports.Location = new System.Drawing.Point(48, 466);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(119, 109);
             this.btnReports.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnReports.TabIndex = 17;
             this.btnReports.TabStop = false;
-            this.btnReports.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnReports_MouseDown);
-            this.btnReports.MouseLeave += new System.EventHandler(this.btnReports_MouseLeave);
-            this.btnReports.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnReports_MouseMove);
-            this.btnReports.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnReports_MouseUp);
+            this.btnReports.MouseDown += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseDown);
+            this.btnReports.MouseLeave += new System.EventHandler(this.customBtn_MouseLeave);
+            this.btnReports.MouseMove += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseMove);
+            this.btnReports.MouseUp += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseUp);
             // 
             // btnUsers
             // 
@@ -173,8 +142,10 @@
             this.btnUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnUsers.TabIndex = 16;
             this.btnUsers.TabStop = false;
-            this.btnUsers.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnUsers_MouseDown);
-            this.btnUsers.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnUsers_MouseUp);
+            this.btnUsers.MouseDown += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseDown);
+            this.btnUsers.MouseLeave += new System.EventHandler(this.customBtn_MouseLeave);
+            this.btnUsers.MouseMove += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseMove);
+            this.btnUsers.MouseUp += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseUp);
             // 
             // btnClients
             // 
@@ -187,36 +158,42 @@
             this.btnClients.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnClients.TabIndex = 15;
             this.btnClients.TabStop = false;
-            this.btnClients.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnClients_MouseDown);
-            this.btnClients.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnClients_MouseUp);
+            this.btnClients.MouseDown += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseDown);
+            this.btnClients.MouseLeave += new System.EventHandler(this.customBtn_MouseLeave);
+            this.btnClients.MouseMove += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseMove);
+            this.btnClients.MouseUp += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseUp);
             // 
             // btnStock
             // 
             this.btnStock.BackColor = System.Drawing.Color.Transparent;
             this.btnStock.BackgroundImage = global::HairBeautyNWRC.Properties.Resources.Round_Button_stockup;
             this.btnStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnStock.Location = new System.Drawing.Point(110, 327);
+            this.btnStock.Location = new System.Drawing.Point(110, 276);
             this.btnStock.Name = "btnStock";
             this.btnStock.Size = new System.Drawing.Size(119, 109);
             this.btnStock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnStock.TabIndex = 14;
             this.btnStock.TabStop = false;
-            this.btnStock.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnStock_MouseDown);
-            this.btnStock.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnStock_MouseUp);
+            this.btnStock.MouseDown += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseDown);
+            this.btnStock.MouseLeave += new System.EventHandler(this.customBtn_MouseLeave);
+            this.btnStock.MouseMove += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseMove);
+            this.btnStock.MouseUp += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseUp);
             // 
             // btnSales
             // 
             this.btnSales.BackColor = System.Drawing.Color.Transparent;
             this.btnSales.BackgroundImage = global::HairBeautyNWRC.Properties.Resources.Round_Button_salesup;
             this.btnSales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSales.Location = new System.Drawing.Point(3, 327);
+            this.btnSales.Location = new System.Drawing.Point(7, 276);
             this.btnSales.Name = "btnSales";
             this.btnSales.Size = new System.Drawing.Size(119, 109);
             this.btnSales.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSales.TabIndex = 13;
             this.btnSales.TabStop = false;
-            this.btnSales.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnSales_MouseDown);
-            this.btnSales.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnSales_MouseUp);
+            this.btnSales.MouseDown += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseDown);
+            this.btnSales.MouseLeave += new System.EventHandler(this.customBtn_MouseLeave);
+            this.btnSales.MouseMove += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseMove);
+            this.btnSales.MouseUp += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseUp);
             // 
             // btnHome
             // 
@@ -230,8 +207,10 @@
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnHome.TabIndex = 12;
             this.btnHome.TabStop = false;
-            this.btnHome.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnHome_MouseDown);
-            this.btnHome.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnHome_MouseUp);
+            this.btnHome.MouseDown += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseDown);
+            this.btnHome.MouseLeave += new System.EventHandler(this.customBtn_MouseLeave);
+            this.btnHome.MouseMove += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseMove);
+            this.btnHome.MouseUp += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseUp);
             // 
             // btnSch
             // 
@@ -244,77 +223,22 @@
             this.btnSch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnSch.TabIndex = 11;
             this.btnSch.TabStop = false;
-            this.btnSch.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnSch_MouseDown);
-            this.btnSch.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnSch_MouseUp);
+            this.btnSch.MouseDown += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseDown);
+            this.btnSch.MouseLeave += new System.EventHandler(this.customBtn_MouseLeave);
+            this.btnSch.MouseMove += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseMove);
+            this.btnSch.MouseUp += new System.Windows.Forms.MouseEventHandler(this.customBtn_MouseUp);
             // 
             // btn_Test
             // 
             this.btn_Test.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Test.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Test.Location = new System.Drawing.Point(48, 410);
+            this.btn_Test.Location = new System.Drawing.Point(48, 624);
             this.btn_Test.Name = "btn_Test";
             this.btn_Test.Size = new System.Drawing.Size(166, 86);
             this.btn_Test.TabIndex = 9;
             this.btn_Test.Text = "Test";
             this.btn_Test.UseVisualStyleBackColor = true;
             this.btn_Test.Click += new System.EventHandler(this.btn_Test_Click);
-            // 
-            // btn_Reports
-            // 
-            this.btn_Reports.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Reports.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Reports.Location = new System.Drawing.Point(28, 380);
-            this.btn_Reports.Name = "btn_Reports";
-            this.btn_Reports.Size = new System.Drawing.Size(166, 86);
-            this.btn_Reports.TabIndex = 8;
-            this.btn_Reports.Text = "Reports";
-            this.btn_Reports.UseVisualStyleBackColor = true;
-            // 
-            // btn_Sales
-            // 
-            this.btn_Sales.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Sales.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Sales.Location = new System.Drawing.Point(3, 350);
-            this.btn_Sales.Name = "btn_Sales";
-            this.btn_Sales.Size = new System.Drawing.Size(166, 86);
-            this.btn_Sales.TabIndex = 7;
-            this.btn_Sales.Text = "Sales";
-            this.btn_Sales.UseVisualStyleBackColor = true;
-            // 
-            // btn_Stock
-            // 
-            this.btn_Stock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Stock.Location = new System.Drawing.Point(60, 368);
-            this.btn_Stock.Name = "btn_Stock";
-            this.btn_Stock.Size = new System.Drawing.Size(166, 86);
-            this.btn_Stock.TabIndex = 6;
-            this.btn_Stock.Text = "Stock";
-            this.btn_Stock.UseVisualStyleBackColor = true;
-            // 
-            // btn_Users
-            // 
-            this.btn_Users.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Users.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Users.Location = new System.Drawing.Point(44, 334);
-            this.btn_Users.Name = "btn_Users";
-            this.btn_Users.Size = new System.Drawing.Size(166, 86);
-            this.btn_Users.TabIndex = 5;
-            this.btn_Users.Text = "Users";
-            this.btn_Users.UseVisualStyleBackColor = true;
-            this.btn_Users.Click += new System.EventHandler(this.btn_Users_Click);
-            // 
-            // btn_home
-            // 
-            this.btn_home.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_home.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_home.Location = new System.Drawing.Point(28, 350);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Size = new System.Drawing.Size(162, 86);
-            this.btn_home.TabIndex = 4;
-            this.btn_home.Text = "Home";
-            this.btn_home.UseVisualStyleBackColor = true;
-            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // Cal_Month
             // 
@@ -362,6 +286,13 @@
             this.pnl_top.BackColor = System.Drawing.Color.White;
             this.pnl_top.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnl_top.BackgroundImage")));
             this.pnl_top.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_top.Controls.Add(this.lbl_SalonSelection);
+            this.pnl_top.Controls.Add(this.lbl_SalonNoSelection);
+            this.pnl_top.Controls.Add(this.rb_Salon4);
+            this.pnl_top.Controls.Add(this.rb_Salon3);
+            this.pnl_top.Controls.Add(this.rb_Salon2);
+            this.pnl_top.Controls.Add(this.rb_Salon1);
+            this.pnl_top.Controls.Add(this.cb_Salon);
             this.pnl_top.Controls.Add(this.lbl_DayDate);
             this.pnl_top.Controls.Add(this.panel1);
             this.pnl_top.Controls.Add(this.pb_hb);
@@ -371,13 +302,97 @@
             this.pnl_top.Size = new System.Drawing.Size(971, 125);
             this.pnl_top.TabIndex = 0;
             // 
+            // lbl_SalonSelection
+            // 
+            this.lbl_SalonSelection.AutoSize = true;
+            this.lbl_SalonSelection.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_SalonSelection.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbl_SalonSelection.Font = new System.Drawing.Font("Nueva Std", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SalonSelection.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbl_SalonSelection.Location = new System.Drawing.Point(471, 65);
+            this.lbl_SalonSelection.Name = "lbl_SalonSelection";
+            this.lbl_SalonSelection.Size = new System.Drawing.Size(145, 43);
+            this.lbl_SalonSelection.TabIndex = 11;
+            this.lbl_SalonSelection.Text = "Beauty";
+            // 
+            // lbl_SalonNoSelection
+            // 
+            this.lbl_SalonNoSelection.AutoSize = true;
+            this.lbl_SalonNoSelection.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_SalonNoSelection.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbl_SalonNoSelection.Font = new System.Drawing.Font("Nueva Std", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SalonNoSelection.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lbl_SalonNoSelection.Location = new System.Drawing.Point(422, 65);
+            this.lbl_SalonNoSelection.Name = "lbl_SalonNoSelection";
+            this.lbl_SalonNoSelection.Size = new System.Drawing.Size(141, 43);
+            this.lbl_SalonNoSelection.TabIndex = 10;
+            this.lbl_SalonNoSelection.Text = "Salon 1";
+            // 
+            // rb_Salon4
+            // 
+            this.rb_Salon4.AutoSize = true;
+            this.rb_Salon4.Location = new System.Drawing.Point(178, 104);
+            this.rb_Salon4.Name = "rb_Salon4";
+            this.rb_Salon4.Size = new System.Drawing.Size(61, 17);
+            this.rb_Salon4.TabIndex = 8;
+            this.rb_Salon4.Text = "Salon 4";
+            this.rb_Salon4.UseVisualStyleBackColor = true;
+            this.rb_Salon4.CheckedChanged += new System.EventHandler(this.rb_Salon_CheckedChanged);
+            // 
+            // rb_Salon3
+            // 
+            this.rb_Salon3.AutoSize = true;
+            this.rb_Salon3.Location = new System.Drawing.Point(178, 82);
+            this.rb_Salon3.Name = "rb_Salon3";
+            this.rb_Salon3.Size = new System.Drawing.Size(61, 17);
+            this.rb_Salon3.TabIndex = 7;
+            this.rb_Salon3.Text = "Salon 3";
+            this.rb_Salon3.UseVisualStyleBackColor = true;
+            this.rb_Salon3.CheckedChanged += new System.EventHandler(this.rb_Salon_CheckedChanged);
+            // 
+            // rb_Salon2
+            // 
+            this.rb_Salon2.AutoSize = true;
+            this.rb_Salon2.Location = new System.Drawing.Point(178, 60);
+            this.rb_Salon2.Name = "rb_Salon2";
+            this.rb_Salon2.Size = new System.Drawing.Size(61, 17);
+            this.rb_Salon2.TabIndex = 6;
+            this.rb_Salon2.Text = "Salon 2";
+            this.rb_Salon2.UseVisualStyleBackColor = true;
+            this.rb_Salon2.CheckedChanged += new System.EventHandler(this.rb_Salon_CheckedChanged);
+            // 
+            // rb_Salon1
+            // 
+            this.rb_Salon1.AutoSize = true;
+            this.rb_Salon1.Checked = true;
+            this.rb_Salon1.Location = new System.Drawing.Point(178, 39);
+            this.rb_Salon1.Name = "rb_Salon1";
+            this.rb_Salon1.Size = new System.Drawing.Size(61, 17);
+            this.rb_Salon1.TabIndex = 5;
+            this.rb_Salon1.TabStop = true;
+            this.rb_Salon1.Text = "Salon 1";
+            this.rb_Salon1.UseVisualStyleBackColor = true;
+            this.rb_Salon1.CheckedChanged += new System.EventHandler(this.rb_Salon_CheckedChanged);
+            // 
+            // cb_Salon
+            // 
+            this.cb_Salon.FormattingEnabled = true;
+            this.cb_Salon.Items.AddRange(new object[] {
+            "Hair",
+            "Beauty"});
+            this.cb_Salon.Location = new System.Drawing.Point(178, 9);
+            this.cb_Salon.Name = "cb_Salon";
+            this.cb_Salon.Size = new System.Drawing.Size(121, 21);
+            this.cb_Salon.TabIndex = 4;
+            this.cb_Salon.SelectedIndexChanged += new System.EventHandler(this.cb_Salon_SelectedIndexChanged);
+            // 
             // lbl_DayDate
             // 
             this.lbl_DayDate.AutoSize = true;
             this.lbl_DayDate.BackColor = System.Drawing.Color.Transparent;
             this.lbl_DayDate.Font = new System.Drawing.Font("Monotype Corsiva", 35F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_DayDate.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_DayDate.Location = new System.Drawing.Point(238, 43);
+            this.lbl_DayDate.Location = new System.Drawing.Point(193, 9);
             this.lbl_DayDate.Name = "lbl_DayDate";
             this.lbl_DayDate.Size = new System.Drawing.Size(537, 56);
             this.lbl_DayDate.TabIndex = 3;
@@ -420,7 +435,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1215, 627);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.pnl_SideSeperation);
             this.Controls.Add(this.pnl_TopSeperation);
             this.Controls.Add(this.pnl_Side);
@@ -455,23 +470,16 @@
         private System.Windows.Forms.PictureBox pb_NwrcLogo;
         private System.Windows.Forms.PictureBox pb_hb;
         private System.Windows.Forms.Panel pnl_Home;
-        private System.Windows.Forms.Button btn_LoadClient;
-        private System.Windows.Forms.Button btn_Schedule;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnl_Side;
         private System.Windows.Forms.Panel pnl_TopSeperation;
         private System.Windows.Forms.Panel pnl_SideSeperation;
         private System.Windows.Forms.MonthCalendar Cal_Month;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btn_home;
         private NWRC_HairBeautyDataSet nWRC_HairBeautyDataSet;
         private System.Windows.Forms.BindingSource clientBindingSource;
         private NWRC_HairBeautyDataSetTableAdapters.ClientTableAdapter clientTableAdapter;
         private System.Windows.Forms.Label lbl_DayDate;
-        private System.Windows.Forms.Button btn_Users;
-        private System.Windows.Forms.Button btn_Stock;
-        private System.Windows.Forms.Button btn_Reports;
-        private System.Windows.Forms.Button btn_Sales;
         private System.Windows.Forms.Button btn_Test;
         private System.Windows.Forms.PictureBox btnSch;
         private System.Windows.Forms.PictureBox btnHome;
@@ -480,5 +488,12 @@
         private System.Windows.Forms.PictureBox btnClients;
         private System.Windows.Forms.PictureBox btnStock;
         private System.Windows.Forms.PictureBox btnSales;
+        private System.Windows.Forms.RadioButton rb_Salon4;
+        private System.Windows.Forms.RadioButton rb_Salon3;
+        private System.Windows.Forms.RadioButton rb_Salon2;
+        private System.Windows.Forms.RadioButton rb_Salon1;
+        private System.Windows.Forms.ComboBox cb_Salon;
+        private System.Windows.Forms.Label lbl_SalonNoSelection;
+        public System.Windows.Forms.Label lbl_SalonSelection;
     }
 }

@@ -61,6 +61,8 @@
             this.lbl_NoClient = new System.Windows.Forms.Label();
             this.btn_AddNewClient = new System.Windows.Forms.Button();
             this.pnl_findclient = new System.Windows.Forms.Panel();
+            this.lbl_SalonNoInfo = new System.Windows.Forms.Label();
+            this.lbl_salonInfo = new System.Windows.Forms.Label();
             this.cb_Treatment = new System.Windows.Forms.ComboBox();
             this.lbl_TreatmentSelect = new System.Windows.Forms.Label();
             this.pnl_Treatment = new System.Windows.Forms.Panel();
@@ -100,7 +102,7 @@
             // 
             // txt_FindName
             // 
-            this.txt_FindName.Location = new System.Drawing.Point(78, 53);
+            this.txt_FindName.Location = new System.Drawing.Point(78, 84);
             this.txt_FindName.Name = "txt_FindName";
             this.txt_FindName.Size = new System.Drawing.Size(214, 20);
             this.txt_FindName.TabIndex = 0;
@@ -111,7 +113,7 @@
             this.lb_AvailClients.BackColor = System.Drawing.Color.Gray;
             this.lb_AvailClients.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_AvailClients.FormattingEnabled = true;
-            this.lb_AvailClients.Location = new System.Drawing.Point(78, 69);
+            this.lb_AvailClients.Location = new System.Drawing.Point(78, 100);
             this.lb_AvailClients.Name = "lb_AvailClients";
             this.lb_AvailClients.Size = new System.Drawing.Size(214, 17);
             this.lb_AvailClients.TabIndex = 1;
@@ -122,7 +124,7 @@
             // 
             this.lbl_SurSearch.AutoSize = true;
             this.lbl_SurSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SurSearch.Location = new System.Drawing.Point(88, 33);
+            this.lbl_SurSearch.Location = new System.Drawing.Point(88, 64);
             this.lbl_SurSearch.Name = "lbl_SurSearch";
             this.lbl_SurSearch.Size = new System.Drawing.Size(195, 17);
             this.lbl_SurSearch.TabIndex = 2;
@@ -431,6 +433,8 @@
             // 
             this.pnl_findclient.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pnl_findclient.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnl_findclient.Controls.Add(this.lbl_SalonNoInfo);
+            this.pnl_findclient.Controls.Add(this.lbl_salonInfo);
             this.pnl_findclient.Controls.Add(this.lb_AvailClients);
             this.pnl_findclient.Controls.Add(this.btn_AddNewClient);
             this.pnl_findclient.Controls.Add(this.txt_FindName);
@@ -441,16 +445,39 @@
             this.pnl_findclient.Size = new System.Drawing.Size(375, 252);
             this.pnl_findclient.TabIndex = 29;
             // 
+            // lbl_SalonNoInfo
+            // 
+            this.lbl_SalonNoInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_SalonNoInfo.AutoSize = true;
+            this.lbl_SalonNoInfo.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.lbl_SalonNoInfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbl_SalonNoInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_SalonNoInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SalonNoInfo.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_SalonNoInfo.Location = new System.Drawing.Point(261, 7);
+            this.lbl_SalonNoInfo.Name = "lbl_SalonNoInfo";
+            this.lbl_SalonNoInfo.Size = new System.Drawing.Size(105, 33);
+            this.lbl_SalonNoInfo.TabIndex = 30;
+            this.lbl_SalonNoInfo.Text = "Salon x";
+            this.lbl_SalonNoInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_salonInfo
+            // 
+            this.lbl_salonInfo.AutoSize = true;
+            this.lbl_salonInfo.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.lbl_salonInfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbl_salonInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_salonInfo.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_salonInfo.Location = new System.Drawing.Point(6, 7);
+            this.lbl_salonInfo.Name = "lbl_salonInfo";
+            this.lbl_salonInfo.Size = new System.Drawing.Size(101, 33);
+            this.lbl_salonInfo.TabIndex = 29;
+            this.lbl_salonInfo.Text = "Beauty";
+            this.lbl_salonInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // cb_Treatment
             // 
             this.cb_Treatment.FormattingEnabled = true;
-            this.cb_Treatment.Items.AddRange(new object[] {
-            "Fake Treatment 1",
-            "Fake Treatment 2",
-            "Fake Treatment 3",
-            "Fake Treatment 4",
-            "Fake Treatment 5",
-            "Fake Treatment 6"});
             this.cb_Treatment.Location = new System.Drawing.Point(19, 44);
             this.cb_Treatment.Name = "cb_Treatment";
             this.cb_Treatment.Size = new System.Drawing.Size(339, 21);
@@ -900,5 +927,7 @@
         private System.Windows.Forms.Button btn_CancelBook;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lbl_salonInfo;
+        private System.Windows.Forms.Label lbl_SalonNoInfo;
     }
 }

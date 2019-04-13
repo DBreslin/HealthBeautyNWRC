@@ -63,6 +63,16 @@ namespace HairBeautyNWRC.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_48x48 {
+            get {
+                object obj = ResourceManager.GetObject("Add_48x48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ButtonDown {
             get {
                 object obj = ResourceManager.GetObject("ButtonDown", resourceCulture);
@@ -96,6 +106,26 @@ namespace HairBeautyNWRC.Properties {
         internal static System.Drawing.Bitmap ButtonUp {
             get {
                 object obj = ResourceManager.GetObject("ButtonUp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Edit_48x48 {
+            get {
+                object obj = ResourceManager.GetObject("Edit_48x48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Refresh_48x48 {
+            get {
+                object obj = ResourceManager.GetObject("Refresh_48x48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

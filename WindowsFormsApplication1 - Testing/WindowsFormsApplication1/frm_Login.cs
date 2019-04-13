@@ -43,8 +43,9 @@ namespace HairBeautyNWRC
         {
             errP = new ErrorProvider();
 
-            connStr = @"Data Source = .\SQLEXPRESS; Initial Catalog = NWRC_HairBeauty; Integrated Security = true";
-            //connStr = @"Data Source = .; Initial Catalog = NWRC_HairBeauty; Integrated Security = true";
+            //connStr = @"Data Source = .\SQLEXPRESS; Initial Catalog = NWRC_HairBeauty; Integrated Security = true";
+            connStr = @"Data Source = .; Initial Catalog = NWRC_HairBeauty; Integrated Security = true";
+
             sqlUserPass = @"SELECT * from UserLogin";
             daUserPass = new SqlDataAdapter(sqlUserPass, connStr);
             cmdBUser = new SqlCommandBuilder(daUserPass);
