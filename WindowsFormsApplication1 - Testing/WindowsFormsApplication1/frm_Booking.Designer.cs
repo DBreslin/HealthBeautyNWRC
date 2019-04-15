@@ -66,6 +66,8 @@
             this.cb_Treatment = new System.Windows.Forms.ComboBox();
             this.lbl_TreatmentSelect = new System.Windows.Forms.Label();
             this.pnl_Treatment = new System.Windows.Forms.Panel();
+            this.tb_Price = new System.Windows.Forms.TextBox();
+            this.lbl_Price = new System.Windows.Forms.Label();
             this.pnl_Slots = new System.Windows.Forms.Panel();
             this.cb_20 = new System.Windows.Forms.CheckBox();
             this.cb_18 = new System.Windows.Forms.CheckBox();
@@ -94,6 +96,8 @@
             this.lbl_BookText = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_DelBook = new System.Windows.Forms.Button();
+            this.btn_DelAllBook = new System.Windows.Forms.Button();
             this.pnl_Addclient.SuspendLayout();
             this.pnl_findclient.SuspendLayout();
             this.pnl_Treatment.SuspendLayout();
@@ -478,15 +482,16 @@
             // cb_Treatment
             // 
             this.cb_Treatment.FormattingEnabled = true;
-            this.cb_Treatment.Location = new System.Drawing.Point(19, 44);
+            this.cb_Treatment.Location = new System.Drawing.Point(22, 30);
             this.cb_Treatment.Name = "cb_Treatment";
             this.cb_Treatment.Size = new System.Drawing.Size(339, 21);
             this.cb_Treatment.TabIndex = 30;
+            this.cb_Treatment.SelectedIndexChanged += new System.EventHandler(this.cb_Treatment_SelectedIndexChanged);
             // 
             // lbl_TreatmentSelect
             // 
             this.lbl_TreatmentSelect.AutoSize = true;
-            this.lbl_TreatmentSelect.Location = new System.Drawing.Point(19, 25);
+            this.lbl_TreatmentSelect.Location = new System.Drawing.Point(19, 9);
             this.lbl_TreatmentSelect.Name = "lbl_TreatmentSelect";
             this.lbl_TreatmentSelect.Size = new System.Drawing.Size(88, 13);
             this.lbl_TreatmentSelect.TabIndex = 31;
@@ -496,12 +501,33 @@
             // 
             this.pnl_Treatment.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pnl_Treatment.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnl_Treatment.Controls.Add(this.tb_Price);
+            this.pnl_Treatment.Controls.Add(this.lbl_Price);
             this.pnl_Treatment.Controls.Add(this.cb_Treatment);
             this.pnl_Treatment.Controls.Add(this.lbl_TreatmentSelect);
             this.pnl_Treatment.Location = new System.Drawing.Point(47, 301);
             this.pnl_Treatment.Name = "pnl_Treatment";
             this.pnl_Treatment.Size = new System.Drawing.Size(375, 100);
             this.pnl_Treatment.TabIndex = 32;
+            // 
+            // tb_Price
+            // 
+            this.tb_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Price.Location = new System.Drawing.Point(292, 64);
+            this.tb_Price.Name = "tb_Price";
+            this.tb_Price.Size = new System.Drawing.Size(69, 23);
+            this.tb_Price.TabIndex = 32;
+            this.tb_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lbl_Price
+            // 
+            this.lbl_Price.AutoSize = true;
+            this.lbl_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Price.Location = new System.Drawing.Point(160, 66);
+            this.lbl_Price.Name = "lbl_Price";
+            this.lbl_Price.Size = new System.Drawing.Size(133, 17);
+            this.lbl_Price.TabIndex = 33;
+            this.lbl_Price.Text = "Treatment Price:   £";
             // 
             // pnl_Slots
             // 
@@ -786,7 +812,7 @@
             this.btn_MakeBook.Name = "btn_MakeBook";
             this.btn_MakeBook.Size = new System.Drawing.Size(158, 43);
             this.btn_MakeBook.TabIndex = 34;
-            this.btn_MakeBook.Text = "Make Booking";
+            this.btn_MakeBook.Text = "Save Booking";
             this.btn_MakeBook.UseVisualStyleBackColor = false;
             this.btn_MakeBook.Click += new System.EventHandler(this.btn_MakeBook_Click);
             // 
@@ -827,6 +853,29 @@
             this.panel2.Size = new System.Drawing.Size(392, 534);
             this.panel2.TabIndex = 38;
             // 
+            // btn_DelBook
+            // 
+            this.btn_DelBook.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_DelBook.Location = new System.Drawing.Point(212, 579);
+            this.btn_DelBook.Name = "btn_DelBook";
+            this.btn_DelBook.Size = new System.Drawing.Size(120, 43);
+            this.btn_DelBook.TabIndex = 39;
+            this.btn_DelBook.Text = "Delete Booking";
+            this.btn_DelBook.UseVisualStyleBackColor = false;
+            this.btn_DelBook.Visible = false;
+            this.btn_DelBook.Click += new System.EventHandler(this.btn_DelBook_Click);
+            // 
+            // btn_DelAllBook
+            // 
+            this.btn_DelAllBook.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_DelAllBook.Location = new System.Drawing.Point(39, 579);
+            this.btn_DelAllBook.Name = "btn_DelAllBook";
+            this.btn_DelAllBook.Size = new System.Drawing.Size(120, 43);
+            this.btn_DelAllBook.TabIndex = 40;
+            this.btn_DelAllBook.Text = "Delete All Customer Bookings";
+            this.btn_DelAllBook.UseVisualStyleBackColor = false;
+            this.btn_DelAllBook.Visible = false;
+            // 
             // frm_Booking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -834,6 +883,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(908, 634);
+            this.Controls.Add(this.btn_DelAllBook);
+            this.Controls.Add(this.btn_DelBook);
             this.Controls.Add(this.lbl_BookText);
             this.Controls.Add(this.lbl_BookNumber);
             this.Controls.Add(this.btn_MakeBook);
@@ -929,5 +980,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbl_salonInfo;
         private System.Windows.Forms.Label lbl_SalonNoInfo;
+        private System.Windows.Forms.TextBox tb_Price;
+        private System.Windows.Forms.Label lbl_Price;
+        private System.Windows.Forms.Button btn_DelBook;
+        private System.Windows.Forms.Button btn_DelAllBook;
     }
 }

@@ -20,6 +20,7 @@ namespace HairBeautyNWRC
         public static string BookNo = "";
         public static int screenWidth = 0;
         public static int screenHeight = 0;
+
         private bool scheduleClicked = false;
         private bool firstload = true;
 

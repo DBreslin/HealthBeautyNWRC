@@ -11,13 +11,15 @@ using System.Data.SqlClient;
 
 namespace HairBeautyNWRC
 {
-    public partial class frm_Booking : Form
+    public partial class frm_Booking : Form 
     {
-        SqlDataAdapter daClient, daClient2, daTreat;
+        SqlDataAdapter daClient, daClient2, daTreat, daTreat2;
         DataSet dsNWRC_HairBeauty = new DataSet();
         SqlCommandBuilder cmdBClient, cmdBTreat;
-        String connStr, sqlClient, sqlClient2, sqlTreat;
+        String connStr, sqlClient, sqlClient2, sqlTreat, sqlTreat2;
         DataRow drclient, drTreat;
+        string treatNo = "";
+
         private bool newClient = false;
         private System.Windows.Forms.ErrorProvider errP;
 
@@ -58,7 +60,8 @@ namespace HairBeautyNWRC
             daTreat.FillSchema(dsNWRC_HairBeauty, SchemaType.Source, "Treatments");
             daTreat.Fill(dsNWRC_HairBeauty, "Treatments");
 
-            int treatCount = 0;
+           
+
             foreach (DataRow dr in dsNWRC_HairBeauty.Tables["Treatments"].Rows)
             {
                 if (frm_Home.salon == "Hair")
@@ -66,47 +69,47 @@ namespace HairBeautyNWRC
                     if (dr["TreatType"].ToString() == "Hairdressing")
                         cb_Treatment.Items.Add(dr["TreatName"].ToString());
                 }
-                else
-                {
-                    if(treatCount==0)
-                    cb_Treatment.Items.Add("**************** Hand and Feet Treats ****************");
+            }
 
+            if (frm_Home.salon == "Beauty")
+            {
+                cb_Treatment.Items.Add("**************** Hand and Feet Treats ****************");
+                foreach (DataRow dr in dsNWRC_HairBeauty.Tables["Treatments"].Rows)
+                {
                     if (dr["TreatType"].ToString() == "Hand and Feet Treats")
                     {
                         cb_Treatment.Items.Add(dr["TreatName"].ToString());
                     }
                 }
-                treatCount++;
+                cb_Treatment.Items.Add("");
+                cb_Treatment.Items.Add("**************** Eye Treatments ****************");
+                foreach (DataRow dr in dsNWRC_HairBeauty.Tables["Treatments"].Rows)
+                {
+                    if (dr["TreatType"].ToString() == "Eye Treatments")
+                        cb_Treatment.Items.Add(dr["TreatName"].ToString());
+                }
+                cb_Treatment.Items.Add("");
+                cb_Treatment.Items.Add("**************** Facial Treatments ****************");
+                foreach (DataRow dr in dsNWRC_HairBeauty.Tables["Treatments"].Rows)
+                {
+                    if (dr["TreatType"].ToString() == "Facial Treatments")
+                        cb_Treatment.Items.Add(dr["TreatName"].ToString());
+                }
+                cb_Treatment.Items.Add("");
+                cb_Treatment.Items.Add("**************** Body Treatments ****************");
+                foreach (DataRow dr in dsNWRC_HairBeauty.Tables["Treatments"].Rows)
+                {
+                    if (dr["TreatType"].ToString() == "Body Treatments")
+                        cb_Treatment.Items.Add(dr["TreatName"].ToString());
+                }
+                cb_Treatment.Items.Add("");
+                cb_Treatment.Items.Add("**************** Waxing ****************");
+                foreach (DataRow dr in dsNWRC_HairBeauty.Tables["Treatments"].Rows)
+                {
+                    if (dr["TreatType"].ToString() == "Waxing")
+                        cb_Treatment.Items.Add(dr["TreatName"].ToString());
+                }
             }
-            cb_Treatment.Items.Add("");
-            cb_Treatment.Items.Add("**************** Eye Treatments ****************");
-            foreach (DataRow dr2 in dsNWRC_HairBeauty.Tables["Treatments"].Rows)
-            {
-                    if (dr2["TreatType"].ToString() == "Eye Treatments")
-                        cb_Treatment.Items.Add(dr2["TreatName"].ToString());
-            }
-            cb_Treatment.Items.Add("");
-            cb_Treatment.Items.Add("**************** Facial Treatments ****************");
-            foreach (DataRow dr3 in dsNWRC_HairBeauty.Tables["Treatments"].Rows)
-            {
-                if (dr3["TreatType"].ToString() == "Facial Treatments")
-                    cb_Treatment.Items.Add(dr3["TreatName"].ToString());
-            }
-            cb_Treatment.Items.Add("");
-            cb_Treatment.Items.Add("**************** Body Treatments ****************");
-            foreach (DataRow dr4 in dsNWRC_HairBeauty.Tables["Treatments"].Rows)
-            {
-                if (dr4["TreatType"].ToString() == "Body Treatments")
-                    cb_Treatment.Items.Add(dr4["TreatName"].ToString());
-            }
-            cb_Treatment.Items.Add("");
-            cb_Treatment.Items.Add("**************** Waxing ****************");
-            foreach (DataRow dr5 in dsNWRC_HairBeauty.Tables["Treatments"].Rows)
-            {
-                if (dr5["TreatType"].ToString() == "Waxing")
-                    cb_Treatment.Items.Add(dr5["TreatName"].ToString());
-            }
-
 
             lbl_BookText.Text = frm_Home.BookNo.ToString();
 
@@ -117,10 +120,21 @@ namespace HairBeautyNWRC
 
             if (bookList.Count > 0)
             {
+                btn_DelBook.Visible = true;
+                btn_DelAllBook.Visible = true;
+
                 lbl_BookText.Text = bookList[0].ToString();
                 txt_FindName.Text = bookList[1].ToString();
                 populateClient(txt_FindName.Text);
 
+                foreach (DataRow dr in dsNWRC_HairBeauty.Tables["Treatments"].Rows)
+                {
+                    if (dr["TreatmentNo"].ToString() == bookList[2].ToString())
+                    {
+                        cb_Treatment.SelectedItem = (dr["TreatName"].ToString());
+                        break;
+                    }
+                }
                 if (bookList[4] == "True")
                     cb_1.Checked = true;
                 if (bookList[5] == "True")
@@ -166,7 +180,7 @@ namespace HairBeautyNWRC
             }
 
         }
-
+        // **************** Add & Edit client Code *****************************
         private void btn_AddNewClient_Click(object sender, EventArgs e)
         {
             btn_CancelBook.Visible = true;
@@ -382,6 +396,26 @@ namespace HairBeautyNWRC
             }
 
         }
+        //************************** End of Add/Edit client Code ************************
+
+        private void cb_Treatment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string selectTreat = cb_Treatment.SelectedItem.ToString();
+                sqlTreat2 = @"SELECT * FROM Treatments WHERE TreatName ='" + selectTreat + "'";
+                daTreat2 = new SqlDataAdapter(sqlTreat2, connStr);
+                DataTable treatdt = new DataTable();
+                daTreat2.Fill(treatdt);
+                drTreat = treatdt.Rows[0];
+                tb_Price.Text = decimal.Parse(drTreat["Price"].ToString()).ToString("#,0.00");
+                treatNo = drTreat[0].ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please Select a Treatment", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private void btn_CancelBook_Click(object sender, EventArgs e)
         {
@@ -498,7 +532,7 @@ namespace HairBeautyNWRC
             bookList.Add(cmb_TitleBook.Text);
             bookList.Add(txt_ForenameBook.Text);
             bookList.Add(txt_SurnameBook.Text);
-            bookList.Add(cb_Treatment.Text);
+            bookList.Add(treatNo);
             bookList.Add(cb_1.Checked.ToString());
             bookList.Add(cb_2.Checked.ToString());
             bookList.Add(cb_3.Checked.ToString());
@@ -527,7 +561,6 @@ namespace HairBeautyNWRC
                     totalcells++;
                 }
                 else
-                    //*************************** this needs fixed cant reset to zero needs to work backwards
                     break;
             }
 
@@ -575,6 +608,18 @@ namespace HairBeautyNWRC
             txt_EmailBook.Clear();
             chk_SkinBook.Checked = false;
         }
+
+        private void btn_DelBook_Click(object sender, EventArgs e)
+        {
+            DialogResult deleteResult = MessageBox.Show("Do You wish to delete this booking for " + txt_FindName.Text + " ? ", "Delete Current Booking", MessageBoxButtons.YesNo);
+            if (deleteResult == DialogResult.Yes)
+            {
+                uc_Schedule.deleteRecord = true;
+                uc_Schedule.canMakeBook = false;
+                this.Dispose();
+            }
+        }
+
     }
 }
 
